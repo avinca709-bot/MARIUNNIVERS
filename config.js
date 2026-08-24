@@ -114,7 +114,7 @@ const config = {
         {
             title: "🎉 Oficialmente juntos",
             content: "Un 14 de Agosto del 2026, ya no era más que una sensación de cuando tendríamos que esperar para vernos, como seria ese día, ya no eras para mí verte, tenerte ese dia, en esas pocas horas que te tendría, tenia que aprovecharla, caminar juntos, agarrados de las manos como dos pequeños adolescentes conociendo el amor por primera vez, comer, gustar de la comida e pesar que no fue de tu agrado, verte como te reías de mis ocurrencias, me daba mucho gusto y satisfacción. <br><br>Pasar tiempo contigo ese día es y seguirá siendo especial para mi, porque pude conocerte, pude estar a tu lado asi sea por un par de horas, no quería que se termine ese dia, a pesar de todo lo malo o bueno, no dudes que de mi amor por ti, no sabes lo very feliz que estaba contigo en ese momento. <br><br>Eres y seguiras siendo especial para mi, y que no podamos estar juntos, no signifique por la razón y el motivo en el cual estamos, todavía me acuerdo de esta foto, es mi favorita, mi niña hermosa, divina, fantástica y que me quedo sin palabras en como describirte.<br><br>",
-            videos: ["assets/Oficialmente_juntos2.mp4"],
+            images: ["assets/Oficialmente_juntos1.JPG"],
             footer: "Nervios, risas y mariposas en el estómago"
         },
 
