@@ -1055,3 +1055,108 @@ h1,
     0 0 20px #ff4d80,
     0 0 40px #ff0055 !important;
 }
+
+/* ============================================================
+   NUEVO DISEÑO DE CARTAS DE GALERÍA (OPTIMIZADO MÓVIL)
+   ============================================================ */
+
+/* Contenedor principal de la galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 30px 15px;
+  justify-content: center;
+}
+
+/* Tarjeta contenedora de cada foto */
+.photo-card {
+  position: relative !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35) !important;
+  padding: 14px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto !important; /* Altura dinámica para que jamás se corte el texto */
+  overflow: hidden !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Oculta cinta vieja si estorba */
+.photo-card::before {
+  display: none !important;
+}
+
+/* Marco e Imagen Grande */
+.placeholder-img {
+  position: relative !important;
+  width: 100% !important;
+  height: 320px !important; /* Foto grande y alta estilo portrait */
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+  margin-bottom: 12px !important;
+}
+
+.placeholder-img img,
+.photo-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* Llena todo el marco sin deformar */
+  display: block !important;
+  position: static !important;
+  border-radius: 14px !important;
+}
+
+/* Texto / Descripción debajo de la foto */
+.photo-caption,
+.photo-card p,
+.card-text {
+  position: static !important; /* Elimina el solapamiento sobre la foto */
+  width: 100% !important;
+  padding: 8px 4px 4px 4px !important;
+  margin: 0 !important;
+  text-align: center !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  color: #f0f0f5 !important;
+  line-height: 1.4 !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  text-shadow: none !important;
+  background: transparent !important;
+}
+
+/* ============================================================
+   AJUSTES ESPECÍFICOS PARA CELULARES
+   ============================================================ */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr !important; /* 1 columna ancha en móvil para máxima visibilidad */
+    max-width: 340px !important;
+    margin: 0 auto !important;
+    gap: 20px !important;
+    padding: 15px 10px !important;
+  }
+
+  .photo-card {
+    padding: 12px !important;
+    transform: rotate(0deg) !important; /* Quita rotaciones incomodas en pantalla chica */
+  }
+
+  .placeholder-img {
+    height: 350px !important; /* Fotos bien grandes y nítidas en celular */
+  }
+
+  .photo-caption,
+  .photo-card p {
+    font-size: 0.92rem !important;
+  }
+}
